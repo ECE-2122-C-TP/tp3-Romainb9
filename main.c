@@ -130,11 +130,29 @@
     printf("le nombre est un multiple de 2 et 7");
 }*/
 
-int main(void){
-    int nbpierre = 0, nbetages = 0, n=0;
+/*int main(void){
+    int nbpierre = 0, nbetages = 1, pierreparetages = 1;
     printf("Saisir le nombre de pierre", nbpierre);
     scanf("%d", nbpierre);
-    while ( nbpierre > n*n){
-        
+    while ( nbpierre > pierreparetages){
+        pierreparetages = pierreparetages + (nbetages*nbetages);
+        nbetages = nbetages + 1;
     }
+    printf("%d pierres permettent de construire une pyramide de %d etages", nbpierre, nbetages-1);
+}*/
+
+int main(void){
+    int total = 0, nombre = 0, a = 0, nbpositif = 1;
+    while(nbpositif){
+        printf("saisir un nombre:\n", nombre);
+        scanf("%d", &nombre);
+        if (nombre >= 0){
+            total = total + nombre;
+            a = a + 1;
+        }
+        else{
+            nbpositif = 0;
+        }
+    }
+    printf("la moyenne vaut %d", total/a);
 }
